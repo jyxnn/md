@@ -135,3 +135,17 @@
  	class A extends B{}
 	A.__proto__ === B;  //继承属性
 	A.prototype.__proto__ == B.prototype;	//继承方法
+
+## jquery-extend继承
+源码中使用for in 遍历，对象原型上的方法也会被遍历，targetobj可继承
+
+	var settings = { validate: false, limit: 5};
+    function Super(){
+        this.validate = true;
+    }
+    Super.prototype.say = function(){
+        console.log('super');
+    }
+    var obj = new Super();
+    $.extend(settings, obj); // obj实例原型上的方法也会被继承
+    settings // {validate:true,limit:5,day:fun...}
