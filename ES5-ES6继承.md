@@ -119,6 +119,7 @@
 
 ## ES6继承
 ### class-extends-super实现继承
+本质是先将超类实例的属性方法加到this上，再用子类的构造函数修饰this
 	
 	class Colorpoint extends Point {
 	    constructor(x,y,color){
@@ -130,11 +131,13 @@
 	        return this.color + ' ' + super.toString(); 
 	    }
 	}
+	// super调用，内部的this指的是子类的实例
+		super() 等价于 Point.prototype.constructor.call(this)
 
-	同时存在两条继承链：一条实现属性继承，一条实现方法的继承
- 	class A extends B{}
-	A.__proto__ === B;  //继承属性
-	A.prototype.__proto__ == B.prototype;	//继承方法
+	// 同时存在两条继承链：一条实现属性继承，一条实现方法的继承
+ 		class A extends B{}
+		A.__proto__ === B;  //继承属性
+		A.prototype.__proto__ == B.prototype;	//继承方法
 
 ## jquery-extend继承
 源码中使用for in 遍历，对象原型上的方法也会被遍历，targetobj可继承
