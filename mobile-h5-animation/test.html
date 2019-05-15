@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h5动画</title>
+    @@include('include/head.html')
+    <link rel="stylesheet" href="css/h5.css">
+    <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+     <script src="https://cdn.bootcss.com/vConsole/3.3.0/vconsole.min.js"></script>
+    <script>
+         var vConsole = new VConsole();
+    </script>
+</head>
+<body style="">
+    <div class="wrp" >
+        <div class="swiper-container my-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide page1">
+                <img id="bg-img" src="img/test.jpg" alt="" style="display: none;">
+                <canvas id="myCanvas"></canvas>
+                <div class="haibao-box"></div>
+                <ul class="ani" swiper-animate-effect="stepShow">
+                    <li><span>宅出一片天</span></li>
+                    <li><span>中美贸易战</span></li>
+                    <li><span>新的一天</span></li>
+                </ul>
+                <div class="btn1 ani btn" swiper-animate-effect="myAniTitle" swiper-animate-duration="2s">滑动进入下一页</div>
+                <div class="btnCreate ani btn" swiper-animate-effect="myAniTitle" swiper-animate-duration="2s">生成海报</div>
+            </div>
+            <div class="swiper-slide page2 swiper-no-swiping">
+                <div class="title ani" swiper-animate-effect="myAniTitle">标题</div>
+                <div class="img-box"><img class="ani img" src="http://temp.im/350x400" alt="" swiper-animate-effect="myAniImg"></div>
+                <div class="btn2 btn">开启下一页</div>
+            </div>
+            <div class="swiper-slide page3 swiper-no-swiping">
+                <div class="title ani" swiper-animate-effect="myAniTitle">标签</div>
+                <div class="ul-box ani" swiper-animate-effect="myAniTitle">
+                    <ul>
+                        <li><span class="change">宅出一片天</span></li>
+                        <li><span class="">中美贸易战</span></li>
+                        <li><span class="">新的一天</span></li>
+                    </ul>
+                </div>
+                <div class="btn3 ani btn">停止</div>
+            </div>
+            <div class="swiper-slide page4 swiper-no-swiping">
+                <div class="title ani" style="font-size:30px;" swiper-animate-effect="myAniTitle"></div>
+                <div class="btn4 ani btn" swiper-animate-effect="myAniTitle">再玩一次</div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="js/test.js"></script>
+</body>
+</html>
