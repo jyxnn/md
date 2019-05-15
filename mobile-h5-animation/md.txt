@@ -1,0 +1,2 @@
+swiper+自定义动画animation
+canvas生成海报
