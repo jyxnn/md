@@ -151,4 +151,4 @@
     }
     var obj = new Super();
     $.extend(settings, obj); // obj实例原型上的方法也会被继承
-    settings // {validate:true,limit:5,day:fun...}
+    settings // {validate:true,limit:5,say:fun...}
